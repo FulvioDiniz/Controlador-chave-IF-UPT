@@ -1,30 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="Stylesheet" href="..\Css\PgRegisterStyle.css">
-    
-    <title>Registration Page</title>
+    <link rel="stylesheet" href="../Css/PgLogin.css">
+    <title>Login</title>
 </head>
+
 <body>
-    <div id="app">
-        <h1>Cadastro</h1>
-        <form @submit.prevent="register">
+    <div id="app" class="login-container">
+        <h1>Login</h1>
+        <form @submit.prevent="Login">
             <label for="username">Username:</label>
             <input type="text" id="username" v-model="username" required>
-            <br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" v-model="email" required>
             <br>
             <label for="password">Password:</label>
             <input type="password" id="password" v-model="password" required>
             <br>
-            <button type="submit">Cadastrar</button>
+            <button type="submit">Login</button>
         </form>
+        <a class="back-button" href="http://127.0.0.1:5500/Front_end/Html/PgPrincipal.html">Voltar</a>
         <p v-if="errorMessage" class="error">{{ errorMessage }}</p>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
@@ -37,19 +35,23 @@
                 errorMessage: ''
             },
             methods: {
-                async register() {
+                async Login() {
                     try {
-                        const response = await axios.post('http://127.0.0.1:8000/register', {
+                        const response = await axios.post('http://127.0.0.1:8000/login', {
                             username: this.username,
-                            email: this.email,
                             password: this.password
                         });
 
-                        if (response.data.success) {
-                            alert('Registration successful');
+                        
+                        if (response.data = 'Login realizado com sucesso!') {
+                            alert(response.data);
+                            window.location.href = 'http://127.0.0.1:5500/Front_end/Html/PgPrincipal.html';
                         } else {
                             this.errorMessage = response.data.message;
                         }
+
+
+
                     } catch (error) {
                         console.error('Error:', error);
                         this.errorMessage = 'An error occurred during registration';
@@ -58,7 +60,7 @@
             }
         });
     </script>
-     
-  
+
 </body>
+
 </html>

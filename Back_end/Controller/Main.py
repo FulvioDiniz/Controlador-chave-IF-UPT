@@ -1,6 +1,5 @@
 import fastapi
 import uvicorn
-from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 import sys
 import os
@@ -13,6 +12,7 @@ sys.path.append(back_end_path)
 
 # Agora você pode importar 'InserirUsuario' normalmente
 from Banco.InserirUsuario import insere_usuario
+from Banco.VerificarLogin import valida_login
 
 app = fastapi.FastAPI()
 
@@ -37,6 +37,23 @@ async def register(credentials: dict):
     else:   
         return {"message": "Usuário já cadastrado!"}
         
+    
+
+@app.post("/login")
+async def login(credentials: dict):
+    username = credentials.get("username")
+    password = credentials.get("password")
+    validador = valida_login(username, password)
+    validador = valida_login(username, password)
+    if validador:
+        return {"success": True, "message": "Login realizado com sucesso!"}
+    else:
+        return {"success": False, "message": "Usuário ou senha incorretos!"}
+
+    
+@app.get("/inicial/{username}")
+async def inicial(username: str):
+    return {"message": f"Olá {username}!"}
     
 
 if __name__ == "__main__":
