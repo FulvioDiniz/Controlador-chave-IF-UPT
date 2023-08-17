@@ -1,8 +1,11 @@
 import fastapi
+from fastapi import Request
 import uvicorn
 from fastapi.middleware.cors import CORSMiddleware
 import sys
 import os
+from fastapi.responses import HTMLResponse
+from fastapi.templating import Jinja2Templates
 
 # Obtém o caminho absoluto para a pasta 'Back_end'
 back_end_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
@@ -15,6 +18,12 @@ from Banco.InserirUsuario import insere_usuario
 from Banco.VerificarLogin import valida_login
 
 app = fastapi.FastAPI()
+
+
+# Caminho relativo ao diretório do frontend
+templates_dir = os.path.join(back_end_path, "../Front_end/Html")
+
+templates = Jinja2Templates(directory=templates_dir)
 
 app.add_middleware(
     CORSMiddleware,
@@ -51,9 +60,9 @@ async def login(credentials: dict):
         return {"success": False, "message": "Usuário ou senha incorretos!"}
 
     
-@app.get("/inicial/{username}")
-async def inicial(username: str):
-    return {"message": f"Olá {username}!"}
+@app.get("/inicial/{username}", response_class=HTMLResponse)
+async def inicial(request: Request, username: str):
+    return templates.TemplateResponse("PgInicialUser.html", {"request": request, "username": username})
     
 
 if __name__ == "__main__":
