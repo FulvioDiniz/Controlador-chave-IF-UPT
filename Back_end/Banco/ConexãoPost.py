@@ -21,6 +21,8 @@ CREATE TABLE usuario (
 );
 '''
 
+
+
 # Tenta estabelecer a conexão
 def ConectarBanco():
     try:
