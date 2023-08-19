@@ -1,5 +1,4 @@
-import sys
-import os
+# Autor: Fulvio Diniz Santos
 from .ConexãoPost import ConectarBanco
 
 table_name = "chave"
@@ -59,4 +58,4 @@ def insere_chave(nome_chave, situacao_chave):
             conn.close()
             return False
 
-insere_chave("chave1", True)
+

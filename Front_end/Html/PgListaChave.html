@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/PgListaChave.css">
+    <title>Controle de Chaves</title>
+</head>
+
+<body>
+    <div id="app" class="container">
+        <h1>Controle de Chaves</h1>
+        <button class="register-button">Registrar Nova Chave</button>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar por chave...">
+        </div>
+        <table>
+            <tr>
+                <th>Chave</th>
+                <th>Status</th>
+                <th>Ação</th>
+            </tr>
+            <tr v-for="(key, index) in keys" :key="index">
+                <td>{{ key.name }}</td>
+                <td>{{ key.status }}</td>
+                <td><button class="btn-emprestar">Emprestar</button></td>
+            </tr>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                keys: []
+            },
+            mounted() {
+                this.Listar_chave();
+            },
+            methods: {
+                async Listar_chave() {
+                    try {
+                        const response = await axios.get('http://127.0.0.1:8000/chaves');
+
+                        // Transformar os dados para o formato esperado
+                        this.keys = response.data.map(item => {
+                            return {
+                                name: item[0],
+                                status: item[1]
+                            };
+                        });
+                        // Verificar se os dados foram processados corretamente
+                        console.log(this.keys);
+                    } catch (error) {
+                        console.log(error);
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -6,6 +6,7 @@ import sys
 import os
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
+from fastapi.responses import JSONResponse
 
 # Obtém o caminho absoluto para a pasta 'Back_end'
 back_end_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
@@ -16,6 +17,8 @@ sys.path.append(back_end_path)
 # Agora você pode importar 'InserirUsuario' normalmente
 from Banco.InserirUsuario import insere_usuario
 from Banco.VerificarLogin import valida_login
+from Banco.InserirChave import insere_chave
+from Banco.ConsultaChave import consulta_chave
 
 app = fastapi.FastAPI()
 
@@ -63,6 +66,11 @@ async def login(credentials: dict):
 @app.get("/inicial/{username}", response_class=HTMLResponse)
 async def inicial(request: Request, username: str):
     return templates.TemplateResponse("PgInicialUser.html", {"request": request, "username": username})
+
+@app.get("/chaves", response_class=HTMLResponse)
+async def listar_chaves(request: Request):
+    lista_chaves = consulta_chave()
+    return JSONResponse(content=lista_chaves)
     
 
 if __name__ == "__main__":

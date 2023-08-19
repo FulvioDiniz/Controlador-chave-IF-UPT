@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+
     <title>Bem-vindo</title>
     <style>
         body {
@@ -12,7 +13,7 @@
             font-family: Arial, sans-serif;
             background-color: #f2f2f2;
         }
-        
+
         .container {
             width: 80%;
             max-width: 600px;
@@ -23,16 +24,16 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
-        
+
         h1 {
             color: #333;
         }
-        
+
         p {
             color: #666;
             margin-top: 10px;
         }
-        
+
         .btn {
             display: inline-block;
             padding: 10px 20px;
@@ -43,19 +44,20 @@
             text-decoration: none;
             transition: background-color 0.3s;
         }
-        
+
         .btn:hover {
             background-color: #0056b3;
-        }        
+        }
     </style>
 </head>
+
 <body>
-    <div class="container">
+    <div id="app" class="container">
         <h1>Bem-vindo ao Sistema</h1>
         <p>O login foi bem-sucedido. {{username}} agora tem acesso ao sistema.</p>
-        <a href="dashboard.html" class="btn">Ir para o Painel de controle de chave</a>
+        <a href="http://127.0.0.1:5500/Front_end/Html/PgListaChave.html" class="btn">Ir para o Painel de controle de
+            chave</a>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
+
 </html>
