@@ -24,7 +24,8 @@
             <tr v-for="(key, index) in keys" :key="index">
                 <td>{{ key.name }}</td>
                 <td>{{ key.status }}</td>
-                <td><button class="btn-emprestar">Emprestar</button></td>
+                <td><button @click="ButtonEmprestar(key.name)" class="btn-emprestar">Emprestar</button></td>
+                <td><button @click="ButtonReceber(key.name)" class="btn-receber">Receber</button></td>
             </tr>
         </table>
     </div>
@@ -56,6 +57,10 @@
                     } catch (error) {
                         console.log(error);
                     }
+                },
+                ButtonEmprestar(nome_chave) {
+                    console.log('Chave emprestada:', nome_chave);
+                    // Você pode adicionar a lógica para emprestar a chave aqui
                 }
             }
         });
