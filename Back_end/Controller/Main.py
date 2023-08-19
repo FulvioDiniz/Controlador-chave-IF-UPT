@@ -53,7 +53,7 @@ async def login(credentials: dict):
     username = credentials.get("username")
     password = credentials.get("password")
     validador = valida_login(username, password)
-    validador = valida_login(username, password)
+    print(validador)
     if validador:
         return {"success": True, "message": "Login realizado com sucesso!"}
     else:

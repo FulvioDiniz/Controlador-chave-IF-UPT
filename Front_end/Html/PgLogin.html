@@ -41,13 +41,15 @@
                             username: this.username,
                             password: this.password
                         });
-
-                        if (response.data = 'Login realizado com sucesso!') {
-                            alert(response.data);
+                        if (response.data.success) {
+                            // Sucesso no login
+                            alert(response.data.message);
                             window.location.href = `http://127.0.0.1:8000/inicial/${this.username}`;
                         } else {
-                            this.errorMessage = response.data.message;
+                            // Erro no login
+                            alert(response.data.message);
                         }
+
 
 
 

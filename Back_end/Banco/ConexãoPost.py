@@ -46,7 +46,7 @@ def ConectarBanco():
                 cursor.execute(create_table_query_usuario)
                 connection.commit()
                 print("Tabela criada com sucesso!")
-        return connection
+            return connection
 
     except psycopg2.Error as e:
         print("Erro ao conectar ao banco de dados:", e)
