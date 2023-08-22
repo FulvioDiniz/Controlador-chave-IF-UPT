@@ -11,7 +11,7 @@
 <body>
     <div id="app" class="container">
         <h1>Controle de Chaves</h1>
-        <button class="register-button">Registrar Nova Chave</button>
+        <button @click="ButtonRegistrarChave" class="register-button">Registrar Nova Chave</button>
         <div class="search-bar">
             <input type="text" placeholder="Buscar por chave...">
         </div>
@@ -19,7 +19,8 @@
             <tr>
                 <th>Chave</th>
                 <th>Status</th>
-                <th>Ação</th>
+                <th>Empresta</th>
+                <th>Recebe</th>
             </tr>
             <tr v-for="(key, index) in keys" :key="index">
                 <td>{{ key.name }}</td>
@@ -39,30 +40,31 @@
             },
             mounted() {
                 this.Listar_chave();
+
             },
             methods: {
                 async Listar_chave() {
                     try {
                         const response = await axios.get('http://127.0.0.1:8000/chaves');
-
-                        // Transformar os dados para o formato esperado
                         this.keys = response.data.map(item => {
                             return {
                                 name: item[0],
                                 status: item[1]
                             };
                         });
-                        // Verificar se os dados foram processados corretamente
-                        console.log(this.keys);
                     } catch (error) {
                         console.log(error);
                     }
-                },
-                ButtonEmprestar(nome_chave) {
-                    console.log('Chave emprestada:', nome_chave);
-                    // Você pode adicionar a lógica para emprestar a chave aqui
-                }
+            },
+            async ButtonEmprestar(nome_chave) {
+                console.log('Chave emprestada:', nome_chave);
+                // Você pode adicionar a lógica para emprestar a chave aqui
+            },
+
+            async ButtonRegistrarChave() {
+                window.location.href = `http://127.0.0.1:8000/cadastro_chave`;
             }
+        }
         });
     </script>
 </body>

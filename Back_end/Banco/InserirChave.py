@@ -1,7 +1,7 @@
 # Autor: Fulvio Diniz Santos
 from .ConexãoPost import ConectarBanco
 
-table_name = "chave"
+table_name = "chave_table"
 
 create_table_query_chave = '''
 CREATE TABLE chave_table (
@@ -22,7 +22,6 @@ def valida_chave(nome_chave):
 def insere_chave(nome_chave, situacao_chave):
     conn = ConectarBanco()
     cur = conn.cursor()
-
     # Verifica se a tabela já existe
     cur.execute(f"SELECT EXISTS (SELECT 1 FROM information_schema.tables WHERE table_name = '{table_name}')")
     table_exists = cur.fetchone()[0]
@@ -57,5 +56,3 @@ def insere_chave(nome_chave, situacao_chave):
             cur.close()
             conn.close()
             return False
-
-

@@ -71,6 +71,22 @@ async def inicial(request: Request, username: str):
 async def listar_chaves(request: Request):
     lista_chaves = consulta_chave()
     return JSONResponse(content=lista_chaves)
+
+
+@app.get("/cadastro_chave", response_class=HTMLResponse)
+async def cadastro_chave(request: Request):
+    return templates.TemplateResponse("PgRegistarChave.html", {"request": request})
+
+@app.post("/registro_chave")
+async def registro_chave(credentials: dict):
+    numero = credentials.get("username")
+    validador = insere_chave(numero, True)
+    if(validador):
+        return {"message": "Chave cadastrada com sucesso!"}
+    else:
+        return {"message": "Chave já cadastrada!"}
+    
+    
     
 
 if __name__ == "__main__":
