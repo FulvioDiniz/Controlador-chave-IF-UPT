@@ -8,6 +8,7 @@ from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import JSONResponse
 
+#oi heito
 # Obtém o caminho absoluto para a pasta 'Back_end'
 back_end_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
