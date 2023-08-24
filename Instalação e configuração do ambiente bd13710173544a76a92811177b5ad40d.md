@@ -1,4 +1,4 @@
-# Instalação e configuração do ambiente:
+# 1a Etapa:
 
 **Passo 1: Configuração Inicial**
 
