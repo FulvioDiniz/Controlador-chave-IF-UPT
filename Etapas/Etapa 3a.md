@@ -1,4 +1,4 @@
-# Etapa3
+# Criar Classe
 
 Para criar as classes utilizamos a biblioteca pydantic.
 
