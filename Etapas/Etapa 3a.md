@@ -1,6 +1,6 @@
 # Etapa3
 
-Para Cria as classes utilizamos a biblioteca pydantic.
+Para criar as classes utilizamos a biblioteca pydantic.
 
 ```python
 from pydantic import BaseModel
