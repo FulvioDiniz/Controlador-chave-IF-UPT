@@ -9,7 +9,6 @@
 Para instalar o pyenv, execute o seguinte comando:
 
 ```bash
-bashCopy code
 curl https://pyenv.run | bash
 
 ```
@@ -19,7 +18,6 @@ curl https://pyenv.run | bash
 Abra o arquivo **`~/.bashrc`** para configurar o pyenv:
 
 ```bash
-bashCopy code
 xed ~/.bashrc
 
 ```
@@ -27,7 +25,6 @@ xed ~/.bashrc
 Adicione o seguinte código ao final do arquivo para configurar o pyenv:
 
 ```bash
-bashCopy code
 # Configuração do pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
@@ -71,7 +68,6 @@ export PROMPT_COMMAND="$PROMPT_COMMAND pyenvVirtualenvUpdatePrompt;"
 Agora que o pyenv está configurado, você pode instalar as versões desejadas do Python. Por exemplo:
 
 ```bash
-bashCopy code
 pyenv install 3.11.5
 pyenv install 3.7.17
 
@@ -82,7 +78,6 @@ pyenv install 3.7.17
 Volta é um gerenciador de versões do Node.js e npm. Para instalá-lo, siga as etapas abaixo:
 
 ```bash
-bashCopy code
 curl https://get.volta.sh | bash
 
 ```
@@ -92,7 +87,6 @@ curl https://get.volta.sh | bash
 Você pode usar o Volta para instalar versões específicas do Node.js e npm:
 
 ```bash
-bashCopy code
 volta install node
 volta install npm
 volta install node@20.5.1
@@ -107,7 +101,6 @@ O Docker é uma plataforma de virtualização de contêineres. Siga as etapas a 
 ### **5.1 Instalação de Dependências**
 
 ```bash
-bashCopy code
 sudo apt install -y apt-transport-https ca-certificates curl software-properties-common gnupg lsb-release
 
 ```
@@ -115,7 +108,6 @@ sudo apt install -y apt-transport-https ca-certificates curl software-properties
 ### **5.2 Adição da Chave GPG do Docker**
 
 ```bash
-bashCopy code
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
 ```
@@ -123,7 +115,6 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o 
 ### **5.3 Adição do Repositório do Docker**
 
 ```bash
-bashCopy code
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu jammy stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 ```
@@ -131,7 +122,6 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docke
 ### **5.4 Atualização e Instalação do Docker**
 
 ```bash
-bashCopy code
 sudo apt update && sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin
 
 ```
@@ -141,7 +131,6 @@ sudo apt update && sudo apt install -y docker-ce docker-ce-cli containerd.io doc
 Adicione o suporte a completions do Docker ao seu shell:
 
 ```bash
-bashCopy code
 sudo curl -L "https://raw.githubusercontent.com/docker/cli/$(curl -sL https://api.github.com/repos/docker/docker/releases/latest | grep tag_name | cut -d'"' -f 4)/contrib/completion/bash/docker" -o /etc/bash_completion.d/docker
 
 ```
@@ -151,7 +140,6 @@ sudo curl -L "https://raw.githubusercontent.com/docker/cli/$(curl -sL https://ap
 Instale o Docker Compose para gerenciar contêineres multi-serviço:
 
 ```bash
-bashCopy code
 sudo apt install docker-compose
 
 ```
@@ -161,7 +149,6 @@ sudo apt install docker-compose
 Se você estiver usando uma distribuição Linux que suporte Docker Desktop, pode instalá-lo com os seguintes comandos:
 
 ```bash
-bashCopy code
 sudo apt install docker-desktop
 
 ```
@@ -171,7 +158,6 @@ sudo apt install docker-desktop
 Inicie o serviço Docker após a instalação:
 
 ```bash
-bashCopy code
 sudo service docker start
 
 ```
