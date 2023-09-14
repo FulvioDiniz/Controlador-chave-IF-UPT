@@ -22,15 +22,11 @@ Você pode começar a desenvolver seu aplicativo web Vue.js no diretório do pro
 
 ### **4. Executar o Servidor de Desenvolvimento**
 
-Para iniciar o servidor de desenvolvimento, execute o seguinte comando no diretório do projeto Vue.js:
+Para iniciar o servidor de desenvolvimento utilize a extensão do vscode: Visual Studio Code Live Server
 
-```bash
-bashCopy code
-npm run serve
 
-```
 
-Acesse **[http://localhost:8080](http://localhost:8080/)** em seu navegador para visualizar o aplicativo em desenvolvimento.
+
 
 ## **Criando o Projeto Backend com FastAPI**
 
