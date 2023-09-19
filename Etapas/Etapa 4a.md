@@ -8,13 +8,13 @@ Criar e configurar o banco de dados:
 pip install psycopg2
 ```
 
-1. Importar a biblioteca
+2. Importar a biblioteca
 
 ```python
 import psycopg2
 ```
 
-1. Variaveis do banco de dados:
+3. Variaveis do banco de dados:
 
 ```python
 dbname = "ControleChave"
@@ -24,7 +24,7 @@ host = ""  # ou o endereço do servidor PostgreSQL
 port = ""       # porta padrão do PostgreSQL
 ```
 
-1. Variavel e execução (Base: Usuario) banco de dados:
+4. Variavel e execução (Base: Usuario) banco de dados:
 
 ```python
 table_name = "usuario"
@@ -42,7 +42,7 @@ CREATE TABLE usuario (
 '''
 ```
 
-1. Conexão banco de dados:
+5. Conexão banco de dados:
 
 ```python
 # Tenta estabelecer a conexão
@@ -76,14 +76,14 @@ def ConectarBanco():
         print("Erro ao conectar ao banco de dados:", e)
 ```
 
-1. Crie uma pasta nova e baixe as bibliotecas:
+6. Crie uma pasta nova e baixe as bibliotecas:
 
 ```python
 pip install sys
 pip install os
 ```
 
-1. Utilizando bibliotecas e importando a conexão do banco:
+7. Utilizando bibliotecas e importando a conexão do banco:
 
 ```python
 import sys
@@ -91,7 +91,7 @@ import os
 from .ConexãoPost import ConectarBanco
 ```
 
-1. Função insere usuario: 
+8. Função insere usuario: 
 
 ```python
 def insere_usuario(nome, email, senha):
@@ -108,7 +108,7 @@ def insere_usuario(nome, email, senha):
         return True
 ```
 
-1. Crie uma pasta para inserir chave e execute o codigo: 
+9. Crie uma pasta para inserir chave e execute o codigo: 
 
 ```python
 # Autor: Fulvio Diniz Santos
@@ -172,7 +172,7 @@ def insere_chave(nome_chave, situacao_chave):
             return False
 ```
 
-1. Agora crie pasta para servidor e execute o codigo:
+10. Agora crie pasta para servidor e execute o codigo:
 
 ```python
 from .ConexãoPost import ConectarBanco
