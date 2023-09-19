@@ -192,5 +192,8 @@ CREATE TABLE usuario (
     senha VARCHAR(255) NOT NULL
 );
 '''
+def cria_BD_servidor:
+	cur.execute(create_table_query_servidor)
+  conn.commit()
 
 ```
