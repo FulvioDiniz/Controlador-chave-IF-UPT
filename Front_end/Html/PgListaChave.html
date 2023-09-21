@@ -39,8 +39,13 @@
                 keys: []
             },
             mounted() {
-                this.Listar_chave();
-
+                const cachedData = localStorage.getItem('cachedKeys');
+                if (cachedData) {
+                    this.keys = JSON.parse(cachedData);
+                } else {
+                    // Se os dados não estiverem em cache, faça uma chamada para listar as chaves
+                    this.Listar_chave();
+                }
             },
             methods: {
                 async Listar_chave() {
@@ -52,19 +57,21 @@
                                 status: item[1]
                             };
                         });
+                        localStorage.setItem('cachedKeys', JSON.stringify(this.keys));
+
                     } catch (error) {
                         console.log(error);
                     }
-            },
-            async ButtonEmprestar(nome_chave) {
-                console.log('Chave emprestada:', nome_chave);
-                // Você pode adicionar a lógica para emprestar a chave aqui
-            },
+                },
+                async ButtonEmprestar(nome_chave) {
+                    console.log('Chave emprestada:', nome_chave);
+                    // Você pode adicionar a lógica para emprestar a chave aqui
+                },
 
-            async ButtonRegistrarChave() {
-                window.location.href = `http://127.0.0.1:8000/cadastro_chave`;
+                async ButtonRegistrarChave() {
+                    window.location.href = `http://127.0.0.1:8000/cadastro_chave`;
+                }
             }
-        }
         });
     </script>
 </body>

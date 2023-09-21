@@ -29,6 +29,7 @@ templates_dir = os.path.join(back_end_path, "../Front_end/Html")
 
 templates = Jinja2Templates(directory=templates_dir)
 
+
 app.add_middleware(
     CORSMiddleware,
     allow_methods=["*"],
