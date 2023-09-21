@@ -206,7 +206,7 @@ body {
   }
 ```
 
-1. Adicione um arquivo python em sua pasta backend
+3. Adicione um arquivo python em sua pasta backend
 
 ```python
 import fastapi
