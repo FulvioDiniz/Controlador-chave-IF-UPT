@@ -118,6 +118,7 @@ table_name = "chave_table"
 
 create_table_query_chave = '''
 CREATE TABLE chave_table (
+    id  PRIMARY KEY,
     nome VARCHAR(255) NOT NULL,
     situacao boolean NOT NULL,
 		status boolean NOT NULL
