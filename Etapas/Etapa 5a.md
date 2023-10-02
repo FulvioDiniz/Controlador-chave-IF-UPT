@@ -32,7 +32,7 @@ def pesquisa_chave(nome_chave):
 
 1. Agora crie uma pagina HTML e use o css como desejar, segue os dois codigos:
     
-    2.1 HTML e Vue.js
+    2.1 HTML e Vue.js(onde ocorre a ligação do back com front)
     
 
 ```python
