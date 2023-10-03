@@ -223,7 +223,7 @@ def create_table():
     con.commit()
     con.close()
 '''
-```
+
 
 1. Execute no main para utilizar as funções:
 
