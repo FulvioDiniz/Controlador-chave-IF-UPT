@@ -30,7 +30,6 @@ class Emprestimo(BaseModel):
   data_emprestimo: str
   data_devolucao: str
   status:boolean
-  nome_servidor_pegou_id: int  # Chave estrangeira para o servidor que emprestou
-  nome_servidor_entregou_id: int  # Chave estrangeira para o servidor que devolveu
-  nome_chave: str
+  chave_id = Column(Integer, ForeignKey("chave.id"))
+  servidor_id = Column(Integer, ForeignKey("servidore.id"))
 ```
