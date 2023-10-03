@@ -30,7 +30,7 @@ class Emprestimo(BaseModel):
   data_emprestimo: str
   data_devolucao: str
   status:boolean
-  nome_servidor_pegou: str
-  nome_servidor_entegou: str
+   nome_servidor_pegou_id: int  # Chave estrangeira para o servidor que emprestou
+    nome_servidor_entregou_id: int  # Chave estrangeira para o servidor que devolveu
   nome_chave: str
 ```
