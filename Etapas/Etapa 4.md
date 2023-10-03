@@ -8,7 +8,7 @@ Criar e configurar o banco de dados:
 pip install psycopg2
 ```
 
-1. Criar uma pasta com nome ConexãoPost e seguir os seguintes passos.
+1. Na pasta backend crie um arquivo com nome ConexãoPost e seguir os seguintes passos.
 
 ```python
 import psycopg2
@@ -76,7 +76,7 @@ def ConectarBanco():
         print("Erro ao conectar ao banco de dados:", e)
 ```
 
-1. Crie uma pasta nova com nome: BancoUsuario  baixe as bibliotecas e siga os passos:
+1. Na pasta backend crie um arquivo com nome: BancoUsuario  baixe as bibliotecas e siga os passos:
 
 ```python
 pip install sys
@@ -108,7 +108,7 @@ def insere_usuario(nome, email, senha):
         return True
 ```
 
-1. Crie uma pasta com nome: BancoChave para inserir chave e execute o codigo: 
+1. Na pasta backend crie um arquivo com nome: BancoChave para inserir chave e execute o codigo: 
 
 ```python
 # Autor: Fulvio Diniz Santos
