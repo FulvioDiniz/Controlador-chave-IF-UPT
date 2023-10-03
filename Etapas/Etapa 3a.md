@@ -30,4 +30,6 @@ class Emprestimo(BaseModel):
   data_emprestimo: str
   data_devolucao: str
   status:boolean
+  nome_servidor: str
+  nome_chave: str
 ```
