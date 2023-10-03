@@ -172,7 +172,7 @@ def insere_chave(nome_chave, situacao_chave):
             return False
 ```
 
-1. Agora crie pasta para servidor com nome: BancoServidor e execute o código:
+1. Na pasta backend crie um arquivo com nome: BancoServidor e execute o código:
 
 ```python
 from .ConexãoPost import ConectarBanco
@@ -196,6 +196,33 @@ CREATE TABLE usuario (
 def cria_BD_servidor:
 	cur.execute(create_table_query_servidor)
   conn.commit()
+```
+
+1. Na pasta backend crie um arquivo com nome: BancoEmprestimo e insira o código:
+
+```python
+from ConexãoPost import ConectarBanco
+
+table = "Emprestimo"
+
+query_table = """
+CREATE TABLE IF NOT EXISTS {0} (
+    id SERIAL PRIMARY KEY,
+    status BOOLEAN,
+    data_criacao VARCHAR(255),
+    data_devolucao VARCHAR(255),
+    chave_id INTEGER REFERENCES Chave(id),
+    servidor_id INTEGER REFERENCES Servidor(id)
+);
+""".format(table)
+
+def create_table():
+    con = ConectarBanco()
+    cur = con.cursor()
+    cur.execute(query_table)
+    con.commit()
+    con.close()
+'''
 ```
 
 1. Execute no main para utilizar as funções:
