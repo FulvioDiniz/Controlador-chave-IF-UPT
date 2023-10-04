@@ -26,11 +26,11 @@ class Servidor(BaseModel):
 
 ```python
 class Emprestimo(BaseModel):
-  id: int
-  data_emprestimo: str
-  data_devolucao: str
-  status:boolean
-  chave = Chave
-  servidor_pegou = Servidor
-  servidor_devolveu = Servidor
+    id: int
+    data_emprestimo: str
+    data_devolucao: str
+    status:bool
+    chave = Chave
+    servidor_pegou = chave.Servidor
+    servido_retornou = chave.Servidor
 ```
