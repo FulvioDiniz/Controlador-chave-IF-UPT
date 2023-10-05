@@ -18,6 +18,7 @@ class Servidor(BaseModel):
   contato:int
   nascimento: st
   status:boolean
+
 class Emprestimo(BaseModel):
     id: int
     data_emprestimo: str
