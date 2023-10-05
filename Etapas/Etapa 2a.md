@@ -36,7 +36,7 @@ Certifique-se de que o Python e o pip estejam instalados no seu sistema. Além d
 
 ### **2. Inicializar o Projeto FastAPI**
 
-```bash
+```
 pip install fastapi
 pip install uvicorn
 mkdir backend
@@ -44,18 +44,29 @@ cd backend
 
 ```
 
-Crie um arquivo chamado **`main.py`** no diretório "nome-do-projeto-backend" para iniciar o projeto FastAPI.
+Crie um arquivo chamado **`main.py`** no diretório "backend" para iniciar o projeto FastAPI.
 
 ### **3. Desenvolvimento Backend com FastAPI**
 
 Desenvolva sua aplicação FastAPI no arquivo **`main.py`**. Configure rotas, modelos, lógica de negócios e outros aspectos do backend.
 
+
+```
+import fastapi
+import uvicorn
+app = fastapi.FastAPI()
+
+if __name__ == "__main__":
+    uvicorn.run(app, host='127.0.0.1', port=8000)
+
+
+```
+
 ### **4. Executar o Servidor FastAPI**
 
 Inicie o servidor FastAPI executando o seguinte comando no diretório do projeto FastAPI:
 
-```bash
-bashCopy code
+```
 uvicorn main:app --reload
 
 ```
