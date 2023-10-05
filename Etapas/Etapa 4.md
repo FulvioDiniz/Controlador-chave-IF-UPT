@@ -191,7 +191,6 @@ CREATE TABLE usuario (
     email VARCHAR(255) NOT NULL,
     senha VARCHAR(255) NOT NULL
 );
-'''
 
 def cria_tabela():
     conn = ConectarBanco()
