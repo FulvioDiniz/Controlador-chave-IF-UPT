@@ -235,17 +235,14 @@ def Teste():
     con.close()
     
 Teste()
-'''
 
 
 
 
+```
 1. Verifique mensagem de sucesso:
 
 ```jsx
-
-
-
 Conexão estabelecida com sucesso!
 A tabela já existe.
 ```
