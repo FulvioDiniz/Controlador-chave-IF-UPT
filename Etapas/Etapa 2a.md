@@ -41,8 +41,8 @@ Certifique-se de que o Python e o pip estejam instalados no seu sistema. Além d
 bashCopy code
 pip install fastapi
 pip install uvicorn
-mkdir nome-do-projeto-backend
-cd nome-do-projeto-backend
+mkdir backend
+cd backend
 
 ```
 
