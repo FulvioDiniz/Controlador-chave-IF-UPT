@@ -108,7 +108,7 @@ def insere_usuario(nome, email, senha):
         return True
 ```
 
-1. Na pasta backend crie um arquivo com nome: BancoChave para inserir chave e execute o codigo: 
+1. Na pasta anterior crie um arquivo com nome: BancoChave.py para inserir chave e execute o codigo: 
 
 ```python
 # Autor: Fulvio Diniz Santos
