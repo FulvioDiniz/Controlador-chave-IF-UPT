@@ -9,8 +9,9 @@ Certifique-se de que o Node.js e o npm estejam instalados no seu sistema. Se nã
 ```bash
 bashCopy code
 npm install -g @vue/cli
-vue create nome-do-projeto-frontend
-cd nome-do-projeto-frontend
+vue create frontend
+mkdir frontend
+cd frontend
 
 ```
 
