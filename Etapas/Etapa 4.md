@@ -205,7 +205,7 @@ def cria_tabela():
 1. Na pasta backend crie um arquivo com nome: BancoEmprestimo e insira o código:
 
 ```python
-from ConexãoPost import ConectarBanco
+from ConexaoBanco import ConectarBanco
 
 table = "Emprestimo"
 
@@ -226,16 +226,6 @@ def create_table():
     cur.execute(query_table)
     con.commit()
     con.close()
-'''
-
-
-
-
-1. Verifique mensagem de sucesso:
-
-```jsx
-
-from ConexãoPost import ConectarBanco
 
 def Teste():
     con = ConectarBanco()
@@ -245,6 +235,17 @@ def Teste():
     con.close()
     
 Teste()
+'''
+
+
+
+
+1. Verifique mensagem de sucesso:
+
+```jsx
+
+
+
 Conexão estabelecida com sucesso!
 A tabela já existe.
 ```
