@@ -1,6 +1,6 @@
 # Criar Classe
 
-Na pasta backend crie outra pasta de nome filter.py e insira os codigos abaixo:
+Na pasta backend crie outra pasta de nome filter e crie um arquivo com no filterclass.py e insira os codigos abaixo:
 
 ```python
 from pydantic import BaseModel
