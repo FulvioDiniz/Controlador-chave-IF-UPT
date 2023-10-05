@@ -76,7 +76,7 @@ def ConectarBanco():
         print("Erro ao conectar ao banco de dados:", e)
 ```
 
-1. Na pasta backend crie um arquivo com nome: BancoUsuario  baixe as bibliotecas e siga os passos:
+1. Na pasta backend e dentro da pasta ConexãoPost crie um arquivo com nome: BancoUsuario.py  baixe as bibliotecas e siga os passos:
 
 ```python
 pip install sys
