@@ -54,7 +54,7 @@ pyenvVirtualenvUpdatePrompt() {
         PS1="$PYENV_VIRTUALENV_ORIGINAL_PS1"
     else
         PS1="($COLOR${VENV_NAME}$RESET)$PYENV_VIRTUALENV_ORIGINAL_PS1"
-    }
+    fi
     export PS1
 }
 export PROMPT_COMMAND="$PROMPT_COMMAND pyenvVirtualenvUpdatePrompt;"
