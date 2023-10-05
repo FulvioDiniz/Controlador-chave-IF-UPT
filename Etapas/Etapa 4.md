@@ -88,7 +88,7 @@ pip install os
 ```python
 import sys
 import os
-from .ConexãoPost import ConectarBanco
+from .ConexaoBanco import ConectarBanco
 ```
 
 1. Função insere usuário: 
