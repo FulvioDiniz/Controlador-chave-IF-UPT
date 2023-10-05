@@ -112,7 +112,7 @@ def insere_usuario(nome, email, senha):
 
 ```python
 # Autor: Fulvio Diniz Santos
-from .ConexãoPost import ConectarBanco
+from .ConexaoBanco import ConectarBanco
 
 table_name = "chave_table"
 
