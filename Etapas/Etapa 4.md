@@ -191,6 +191,7 @@ CREATE TABLE usuario (
     email VARCHAR(255) NOT NULL,
     senha VARCHAR(255) NOT NULL
 );
+'''
 
 def cria_tabela():
     conn = ConectarBanco()
@@ -199,11 +200,6 @@ def cria_tabela():
     conn.commit()
 
     
-'''
-
-def cria_BD_servidor:
-	cur.execute(create_table_query_servidor)
-  conn.commit()
 ```
 
 1. Na pasta backend crie um arquivo com nome: BancoEmprestimo e insira o código:
