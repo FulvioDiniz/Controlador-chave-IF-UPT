@@ -5,7 +5,7 @@ Criar e configurar o banco de dados:
 1. Baixar a biblioteca: psycopg2
 
 ```python
-pip install psycopg2
+pip install psycopg2-binary
 ```
 
 1. Na pasta backend crie uma pasta com nome ConexãoPost e crie um arquivo ConexaoBanco.py seguir os seguintes passos.
