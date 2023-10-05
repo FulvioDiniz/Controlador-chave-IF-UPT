@@ -1,20 +1,16 @@
 # Criar Classe
 
-Para criar as classes utilizamos a biblioteca pydantic.
+Na pasta backend crie outra pasta de nome filter.py e insira os codigos abaixo:
 
 ```python
 from pydantic import BaseModel
-```
 
-```python
 class Chave(BaseModel):
   id: int
   nome: str
   situacao: str
   status:boolean
-```
 
-```python
 class Servidor(BaseModel):
   id: int
   nome: str
@@ -22,9 +18,6 @@ class Servidor(BaseModel):
   contato:int
   nascimento: st
   status:boolean
-```
-
-```python
 class Emprestimo(BaseModel):
     id: int
     data_emprestimo: str
