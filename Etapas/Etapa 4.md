@@ -229,9 +229,12 @@ def create_table():
 '''
 
 
-1. Execute no main para utilizar as funções:
+
+
+1. Verifique mensagem de sucesso:
 
 ```jsx
+
 from ConexãoPost import ConectarBanco
 
 def Teste():
@@ -242,11 +245,6 @@ def Teste():
     con.close()
     
 Teste()
-```
-
-1. Verifique mensagem de sucesso:
-
-```jsx
 Conexão estabelecida com sucesso!
 A tabela já existe.
 ```
