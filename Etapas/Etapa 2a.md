@@ -6,7 +6,7 @@ Certifique-se de que o Node.js e o npm estejam instalados no seu sistema. Se nã
 
 ### **2. Inicializar o Projeto Vue.js**
 
-```bash
+```
 npm install -g @vue/cli
 vue create frontend
 mkdir frontend
