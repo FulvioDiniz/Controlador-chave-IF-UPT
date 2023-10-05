@@ -51,7 +51,7 @@ Crie um arquivo chamado **`main.py`** no diretório "backend" para iniciar o pro
 Desenvolva sua aplicação FastAPI no arquivo **`main.py`**. Configure rotas, modelos, lógica de negócios e outros aspectos do backend.
 
 
-```
+```python
 import fastapi
 import uvicorn
 app = fastapi.FastAPI()
