@@ -9,15 +9,15 @@ class Chave(BaseModel):
   id: int
   nome: str
   situacao: str
-  status:boolean
+  status:bool
 
 class Servidor(BaseModel):
   id: int
   nome: str
   cpf: str
   contato:int
-  nascimento: st
-  status:boolean
+  nascimento: str
+  status:bool
 
 class Emprestimo(BaseModel):
     id: int
