@@ -175,7 +175,7 @@ def insere_chave(nome_chave, situacao_chave):
 1. Na pasta backend crie um arquivo com nome: BancoServidor e execute o código:
 
 ```python
-from .ConexãoPost import ConectarBanco
+from .ConexaoBanco import ConectarBanco
 
 table_name = "Servidor"
 
@@ -191,6 +191,15 @@ CREATE TABLE usuario (
     email VARCHAR(255) NOT NULL,
     senha VARCHAR(255) NOT NULL
 );
+'''
+
+def cria_tabela():
+    conn = ConectarBanco()
+    cur = conn.cursor()
+    cur.execute(create_table_query_servidor)
+    conn.commit()
+
+    
 '''
 
 def cria_BD_servidor:
