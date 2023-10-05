@@ -7,7 +7,6 @@ Certifique-se de que o Node.js e o npm estejam instalados no seu sistema. Se nã
 ### **2. Inicializar o Projeto Vue.js**
 
 ```bash
-bashCopy code
 npm install -g @vue/cli
 vue create frontend
 mkdir frontend
@@ -38,7 +37,6 @@ Certifique-se de que o Python e o pip estejam instalados no seu sistema. Além d
 ### **2. Inicializar o Projeto FastAPI**
 
 ```bash
-bashCopy code
 pip install fastapi
 pip install uvicorn
 mkdir backend
