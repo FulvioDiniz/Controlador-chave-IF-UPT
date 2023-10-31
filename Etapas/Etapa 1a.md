@@ -183,5 +183,13 @@ Substitua **`mysecretpassword`** pela senha desejada para o banco de dados Postg
 sudo docker run -i -t ubuntu /bin/bash
 
 ```
+## **11. Para melhor vizualização baixe em sua maquina o pgadmin4 e utilize o banco com as conexões criadas por lá. (Opcional - Recomendado) **
+
+```bash
+https://www.pgadmin.org/download/pgadmin-4-windows/
+
+```
+
+
 
 [FulvioDiniz - Overview](https://github.com/FulvioDiniz)
