@@ -1,5 +1,8 @@
 # **Documentação de Configuração do Projeto**
-
+## **0. Antes de tudo utilize o comando:
+```bash
+Sudo apt-get update
+```
 ## **1. Configuração do pyenv**
 
 ### **1.1 Instalação do pyenv**
