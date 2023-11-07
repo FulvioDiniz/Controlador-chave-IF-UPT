@@ -172,17 +172,19 @@ sudo service docker start
 Crie e execute um contêiner Docker com a imagem do Ubuntu e PostgreSQL:
 
 ```bash
-bashCopy code
 sudo docker run -d --name ubuntu-postgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 postgres:latest
 
 ```
-
-Substitua **`mysecretpassword`** pela senha desejada para o banco de dados PostgreSQL.
+Para conectar-se ao banco de dados, execute o seguinte comando no terminal:
 
 ```bash
-sudo docker run -i -t ubuntu /bin/bash
-
+psql -h localhost -p 5432 -U postgres
 ```
+Crie seu banco de dados substituindo "mihadatabase" para nome desejado
+```bash
+CREATE DATABASE minhabasededados;
+```
+
 ## **11. Para melhor vizualização baixe em sua maquina o pgadmin4 e utilize o banco com as conexões criadas por lá. (Opcional - Recomendado) **
 
 ```bash
